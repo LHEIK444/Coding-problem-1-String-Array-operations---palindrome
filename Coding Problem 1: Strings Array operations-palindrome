@@ -1,0 +1,26 @@
+// Prompt the user to enter two words (use default values for testing if needed)
+let word1 = prompt("Enter the first word (e.g., RACECAR):", "RACECAR");
+let word2 = prompt("Enter the second word (e.g., RECORDER):", "RECORDER");
+
+// Function to reverse a string
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+// Reverse both words
+let reversedWord1 = reverseString(word1);
+let reversedWord2 = reverseString(word2);
+
+// Log the original and reversed strings to the console
+console.log(`Original word 1: "${word1}"`);
+console.log(`Reversed word 1: "${reversedWord1}"`);
+console.log(`Original word 2: "${word2}"`);
+console.log(`Reversed word 2: "${reversedWord2}"`);
+
+// Check if the original strings are equal to the reversed strings
+let isWord1Palindrome = word1 === reversedWord1;
+let isWord2Palindrome = word2 === reversedWord2;
+
+// Log the truth value for both words
+console.log(`Is "${word1}" a palindrome? ${isWord1Palindrome}`);
+console.log(`Is "${word2}" a palindrome? ${isWord2Palindrome}`);
